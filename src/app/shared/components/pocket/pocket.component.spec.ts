@@ -22,4 +22,10 @@ describe('PocketComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as value not null`, () => {
+    fixture = TestBed.createComponent(PocketComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.value).toBeDefined();
+  });
 });

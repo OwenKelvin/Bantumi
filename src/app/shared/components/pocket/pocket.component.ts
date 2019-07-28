@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PocketComponent implements OnInit {
 
-  constructor() { }
+  private value: number;
+  constructor() {
+    this.value = 7;
+   }
 
   ngOnInit() {
   }
