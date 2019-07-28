@@ -8,6 +8,9 @@ import { PocketComponent } from './pocket/pocket.component';
   declarations: [PocketComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    PocketComponent
   ]
 })
 export class ComponentsModule { }

@@ -12,7 +12,7 @@ import { ComponentsModule } from './components/components.module';
     MatCheckboxModule,
     ComponentsModule
   ],
-  exports: [MatButtonModule, MatCheckboxModule],
+  exports: [MatButtonModule, MatCheckboxModule, ComponentsModule],
 })
 
 export class SharedModule { }
