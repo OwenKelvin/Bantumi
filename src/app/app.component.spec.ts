@@ -2,6 +2,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { PocketComponent } from './shared/components/pocket/pocket.component';
+import { BoardComponent } from './shared/components/board/board.component';
+import { CumulativePocketComponent } from './shared/components/cumulative-pocket/cumulative-pocket.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,7 +13,9 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        PocketComponent
+        PocketComponent,
+        BoardComponent,
+        CumulativePocketComponent
       ],
     }).compileComponents();
   }));
@@ -26,6 +30,18 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Bantumi');
+  });
+
+  it(`should have noOfPockets equal to 7`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.noOfPockets).toEqual(7);
+  });
+
+  it(`should have initialPocketValue equal to 4`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.initialPocketValue).toEqual(4);
   });
 
   it('should render title in a h1 tag', () => {

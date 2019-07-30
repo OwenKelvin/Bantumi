@@ -4,13 +4,10 @@
     {{ title }}!
   </h1>
   <section >
-    <app-pocket></app-pocket>
-    <app-pocket></app-pocket>
-    <app-pocket></app-pocket>
-    <app-pocket></app-pocket>
-    <app-pocket></app-pocket>
-    <app-pocket></app-pocket>
-    <app-pocket></app-pocket>
+    <app-board 
+      [initialPocketValue]='initialPocketValue'
+      [noOfPockets]='noOfPockets'
+    ></app-board>
   </section>
   
   <router-outlet></router-outlet>

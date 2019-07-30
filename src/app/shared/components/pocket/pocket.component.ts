@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pocket',
@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PocketComponent implements OnInit {
 
-  private value: number;
-  constructor() {
-    this.value = 7;
-   }
+  private value = 7;
+  @Input() inputValue: number;
+  constructor() { }
 
   ngOnInit() {
+    this.value = this.inputValue;
   }
 
 }
