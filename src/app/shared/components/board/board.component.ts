@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-board',
@@ -13,6 +13,10 @@ export class BoardComponent implements OnInit {
   @Input() initialPocketValue: number;
   constructor() {
     this.pockets = { player1: [], player2: []};
+    this.cumulative = { player1: { value: 0 }, player2: { value: 0 }};
+  }
+  makeMove(pocket: any) {
+    alert(JSON.stringify(pocket));
   }
   ngOnInit() {
     this.players = {

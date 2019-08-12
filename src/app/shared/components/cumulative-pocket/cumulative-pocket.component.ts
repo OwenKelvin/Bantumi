@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cumulative-pocket',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CumulativePocketComponent implements OnInit {
 
-  constructor() { }
+  @Input() inputValue: number;
+  value: number;
+  constructor() {
+   }
 
   ngOnInit() {
+    this.value = this.inputValue;
   }
 
 }

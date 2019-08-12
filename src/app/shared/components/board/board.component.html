@@ -1,10 +1,15 @@
 <section >
     <section>
-        <app-pocket *ngFor="let pocket of pockets.player1" [inputValue]='pocket'></app-pocket>
+        <app-pocket 
+            *ngFor="let pocket of pockets.player1; index as i" 
+            [inputValue]='pocket'
+            (makeMove)='makeMove(i)'
+        >
+        </app-pocket>
     </section>
     <section>
-        <app-cumulative-pocket style="float: left"></app-cumulative-pocket>
-        <app-cumulative-pocket style="float:right"></app-cumulative-pocket>
+        <app-cumulative-pocket [inputValue]='cumulative.player1.value' style="float: left"></app-cumulative-pocket>
+        <app-cumulative-pocket [inputValue]='cumulative.player2.value' style="float:right"></app-cumulative-pocket>
     </section>
     <section>
         <app-pocket *ngFor="let pocket of pockets.player2" [inputValue]='pocket'></app-pocket>
